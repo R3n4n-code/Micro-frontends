@@ -1,0 +1,57 @@
+.grid-pedido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    
+}
+
+.card-pedido {
+    background: rgb(252, 248, 248);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 10rem;
+    padding: 10px;
+    margin: auto;
+}
+
+.card-pedido img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-pedido h2 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.card-pedido p {
+    font-size: 0.9rem;
+    
+}
+
+.card-pedido button {
+    background-color: #c50101;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card-pedido button:hover {
+    background-color: #d10b0b;
+}
+#preco-pedido {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #19d612;
+}
+
+.div-Pedido {
+    display: flex;
+    gap: 1rem;
+}

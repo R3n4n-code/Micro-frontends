@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "nome": "Hambúrguer Artesanal",
+    "descricao": "Pão brioche, 180g de carne bovina, queijo cheddar derretido e maionese da casa.",
+    "preco": 32.90,
+    "imagem": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 2,
+    "nome": "Pizza Margherita",
+    "descricao": "Massa artesanal, molho de tomate fresco, muçarela de búfala e manjericão.",
+    "preco": 45.00,
+    "imagem": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 3,
+    "nome": "Tacos de Carne Asada",
+    "descricao": "Três tortillas de milho recheadas com carne fatiada, pico de gallo e guacamole.",
+    "preco": 28.50,
+    "imagem": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 4,
+    "nome": "Poke de Salmão",
+    "descricao": "Base de arroz japonês, salmão fresco em cubos, abacate, edamame e molho tarê.",
+    "preco": 42.00,
+    "imagem": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 5,
+    "nome": "Massa Carbonara",
+    "descricao": "Spaghetti clássico italiano com guanciale, gemas de ovo, pecorino e pimenta-preta.",
+    "preco": 38.90,
+    "imagem": "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 6,
+    "nome": "Sobremesa Petit Gâteau",
+    "descricao": "Bolo quente de chocolate com recheio cremoso, acompanhado de sorvete de baunilha.",
+    "preco": 22.00,
+    "imagem": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
+  }
+]
+
+
