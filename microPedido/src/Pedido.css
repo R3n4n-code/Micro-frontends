@@ -55,3 +55,25 @@
     display: flex;
     gap: 1rem;
 }
+
+.div-Pedido button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.div-Pedido button:hover {
+    background-color: #333333;
+}
+
+.div-Pedido p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+}

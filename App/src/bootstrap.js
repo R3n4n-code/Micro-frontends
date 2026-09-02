@@ -2,11 +2,14 @@ import React from "react";
 import {createRoot} from "react-dom/client";
 import Grid from "microCardapio/Grid";
 import Pedido from "microPedido/Pedido";
+import "./global.css";
 
 function App() {
     return (
         <div>
-            <h1>Ponto Sabor</h1>
+           <div className="header">
+            <h1 className="h1">Ponto Sabor</h1>
+           </div>
             <Grid />
             <Pedido />
         </div>

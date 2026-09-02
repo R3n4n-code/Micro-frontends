@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import "./Grid.css";
 
 export default function Grid() {
-  const [itens, setItens] = useState(cardapio);
+  const ProdutosComID = cardapio.map((item) => ({...item, id: crypto.randomUUID()}))
+  const [itens, setItens] = useState(ProdutosComID);
+  
   return (
     <div className="grid">
       {itens.map((item) => (
@@ -16,8 +18,10 @@ export default function Grid() {
               <p>{item.descricao}</p>
             </div>
           </div>
-          <p id="preco">R$ {item.preco.toFixed(2)}</p>
+          <div className="div3">
           <button onClick={() => AdicionarAoCarrinho(item)}>Adicionar ao carrinho</button>
+          <p id="preco">R$ {item.preco.toFixed(2)}</p>
+        </div>
         </div>
       ))}
     </div>
