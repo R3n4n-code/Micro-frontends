@@ -2,22 +2,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 
 
-const isProduction = process.env.NODE_ENV === "production";
-
-
-const CARDAPIO_URL = isProduction 
-    ? process.env.URL_CARDAPIO 
-    : "http://localhost:3001";
-
-const PEDIDO_URL = isProduction 
-    ? process.env.URL_PEDIDO 
-    : "http://localhost:3002";
+const CARDAPIO_URL = process.env.URL_MICRO_CARDAPIO || "http://localhost:3001";
+const PEDIDO_URL = process.env.URL_MICRO_PEDIDO || "http://localhost:3002";
 
 module.exports = {
     entry: "./src/index.js",
 
-   
-    mode: isProduction ? "production" : "development",
+  
+    mode: process.env.NODE_ENV === "production" ? "production" : "development",
 
     devServer: {
         port: 3000, 
@@ -32,7 +24,6 @@ module.exports = {
         new ModuleFederationPlugin({
             name: "Restaurante",
 
-        
             remotes: {
                 microCardapio: `microCardapio@${CARDAPIO_URL}/remoteEntry.js`,
                 microPedido: `microPedido@${PEDIDO_URL}/remoteEntry.js`,
@@ -41,11 +32,11 @@ module.exports = {
             shared: {
                 react: {
                     singleton: true,
-                    requiredVersion: "auto", 
+                    requiredVersion: false, 
                 },
                 "react-dom": {
                     singleton: true,
-                    requiredVersion: "auto",
+                    requiredVersion: false, 
                 },
             },
         }),
