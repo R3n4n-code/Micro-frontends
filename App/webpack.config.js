@@ -6,11 +6,11 @@ const isProduction = process.env.NODE_ENV === "production";
 
 
 const CARDAPIO_URL = isProduction 
-    ? process.env.VERCEL_URL_CARDAPIO 
+    ? process.env.URL_CARDAPIO 
     : "http://localhost:3001";
 
 const PEDIDO_URL = isProduction 
-    ? process.env.VERCEL_URL_PEDIDO 
+    ? process.env.URL_PEDIDO 
     : "http://localhost:3002";
 
 module.exports = {
