@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Grid() {
   const ProdutosComID = cardapio.map((item) => ({...item, id: crypto.randomUUID()})) // Damos um Id para cada item
-  const [itens, setitens] = useStete(ProdutosComID)
+  const [itens, setitens] = useState(ProdutosComID)
   
   // Nosso grid usamos um map para renderizar todos nosso cardapio em cards
   return (
