@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const webpack = require("webpack");
-
+// webpack de nosso host usando variaveis de ambiente para darmos deploy no vercel
 module.exports = {
     entry: "./src/index.js",
     mode: "production",

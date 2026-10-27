@@ -1,11 +1,13 @@
-import cardapio from "./data/cardapio.json";
-import React, { useState } from "react";
+import cardapio from "./data/cardapio.json";  // Importamos nossos dados mocados para utilizarmos na aplicação
 import "./Grid.css";
 
+
+
 export default function Grid() {
-  const ProdutosComID = cardapio.map((item) => ({...item, id: crypto.randomUUID()}))
-  const [itens, setItens] = useState(ProdutosComID);
+  const ProdutosComID = cardapio.map((item) => ({...item, id: crypto.randomUUID()})) // Damos um Id para cada item
+  const itens = ProdutosComID
   
+  // Nosso grid usamos um map para renderizar todos nosso cardapio em cards
   return (
     <div className="grid">
       {itens.map((item) => (
@@ -28,6 +30,7 @@ export default function Grid() {
   )
 }
 
+// A principal maneira de comunicação entre os microfronts  
 function AdicionarAoCarrinho(item) {
   window.dispatchEvent(new CustomEvent("adicionarAoCarrinho", { detail: item }));
 
