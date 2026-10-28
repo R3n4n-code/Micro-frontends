@@ -8,7 +8,7 @@ module.exports = {
 
     plugins: [
         new webpack.EnvironmentPlugin({
-            URL_MICRO_CARDAPIO: '', 
+            URL_MICRO_CARDAPIO: '',
             URL_MICRO_PEDIDO: ''
         }),
 
@@ -20,7 +20,7 @@ module.exports = {
         new ModuleFederationPlugin({
             name: "Restaurante",
 
-           
+
             remotes: {
                 microCardapio: `microCardapio@${process.env.URL_MICRO_CARDAPIO}/remoteEntry.js`,
                 microPedido: `microPedido@${process.env.URL_MICRO_PEDIDO}/remoteEntry.js`,
@@ -31,12 +31,15 @@ module.exports = {
                     singleton: true,
                     eager: true,
                     requiredVersion: false,
+                    strictVersion: false
                 },
                 "react-dom": {
                     singleton: true,
+                    eager: true,
                     requiredVersion: false,
-                },
-            },
+                    strictVersion: false
+                }
+            }
         }),
     ],
 
