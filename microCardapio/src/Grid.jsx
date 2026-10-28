@@ -1,10 +1,10 @@
 import cardapio from "./data/cardapio.json";  // Importamos nossos dados mocados para utilizarmos na aplicação
 import "./Grid.css";
-import { useState } from "react";
+import React, { useState } from "react"; 
 
-
+const ProdutosComID = cardapio.map((item) => ({...item, id: crypto.randomUUID()})) // Damos um Id para cada item
 export default function Grid() {
-  const ProdutosComID = cardapio.map((item) => ({...item, id: crypto.randomUUID()})) // Damos um Id para cada item
+  
   const [itens, setitens] = useState(ProdutosComID)
   
   // Nosso grid usamos um map para renderizar todos nosso cardapio em cards
