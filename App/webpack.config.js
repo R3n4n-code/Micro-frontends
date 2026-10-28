@@ -29,6 +29,7 @@ module.exports = {
             shared: {
                 react: {
                     singleton: true,
+                    eager: true,
                     requiredVersion: false,
                 },
                 "react-dom": {
