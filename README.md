@@ -2,12 +2,11 @@
 
 Projeto para portifolio desenvolvido utilizando a arquitetura de **Microfrontends** com **Webpack Module Federation**, React e JavaScript.
 
-O sistema é dividido em três aplicações independentes:
-
-* 🏠 **Host** — aplicação principal que reúne os microfrontends.
-* 🍔 **microCardapio** — responsável pela exibição do cardápio e dos produtos.
-* 🛒 **microPedido** — responsável pelo carrinho/pedido do cliente.
-
+## Estrutura dos Microfrontends
+Este ecossistema está dividido e hospedado de forma independente:
+* **Host (Orquestrador):** [https://micro-frontends-five.vercel.app] - Une os módulos e gerencia a casca do app.
+* **Micro-Cardápio:** [https://micro-frontends-cardapio.vercel.app/] - Responsável pela listagem e dados dos produtos.
+* **Micro-Pedido:** [https://micro-frontends-pedido.vercel.app] - Responsável pelas regras de negócio do carrinho de compras.
 
 ---
 
@@ -23,7 +22,7 @@ O sistema é dividido em três aplicações independentes:
 
 ---
 
-# 🚀 Instalação
+# Instalação
 
 Primeiramente, clone ou baixe o projeto.
 
@@ -85,7 +84,7 @@ npm install
 
 ---
 
-# ▶️ Como executar o projeto
+# Como executar o projeto
 
 É necessário executar os **três projetos ao mesmo tempo**, pois o Host depende dos dois microfrontends.
 
@@ -94,7 +93,7 @@ Cada aplicação utiliza uma porta diferente.
 
 ---
 
-## 🍔 1. Executando o microCardapio
+## 1. Executando o microCardapio
 
 Abra um terminal na pasta:
 
@@ -124,7 +123,7 @@ Esse arquivo permite que outras aplicações encontrem os módulos disponibiliza
 
 ---
 
-## 🛒 2. Executando o microPedido
+## 2. Executando o microPedido
 
 Abra **outro terminal**.
 
@@ -154,7 +153,7 @@ http://localhost:3002/remoteEntry.js
 
 ---
 
-## 🏠 3. Executando o Host
+## 3. Executando o Host
 
 Abra um **terceiro terminal**.
 
@@ -200,7 +199,7 @@ new ModuleFederationPlugin({
 
 ---
 
-## 📦 Consumindo o microCardapio
+## Consumindo o microCardapio
 
 O Host registra o `microCardapio` e o `microPedido` como Remote:
 
@@ -244,7 +243,7 @@ window.addEventListener()
 
 ---
 
-# 🧩 Papel de cada aplicação
+# Papel de cada aplicação
 
 ### 🏠 Host
 
